@@ -15,7 +15,7 @@ Information about external dependencies (redis, mongo, postgres, etc).
 - PhantomJS
 - Rails 5
 
-### Bootstrap application
+## Bootstrap application
 
 1. Clone application as new project with original repository named "rails-skeleton".
 
@@ -57,6 +57,7 @@ Information about external dependencies (redis, mongo, postgres, etc).
   mv doc/README_TEMPLATE.md README.md
   # update README.md
   git commit -am "Update README.md"
+
 
 ## Scripts
 
