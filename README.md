@@ -15,20 +15,48 @@ Information about external dependencies (redis, mongo, postgres, etc).
 - PhantomJS
 - Rails 5
 
-## Quick Start
+### Bootstrap application
 
-Clone this repo:
+1. Clone application as new project with original repository named "rails-skeleton".
 
-```
-git clone git@github.com:IlkhamGaysin/rails-skeleton.git
-cd repo
-```
+   ```bash
+   git clone git@github.com:IlkhamGaysin/rails-skeleton.git --origin skeleton [MY-NEW-PROJECT]
+   ```
 
-Run setup
+2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
 
-```
-bin/setup
-```
+  ```bash
+  git remote add origin git@github.com:[MY-GITHUB-ACCOUNT]/[MY-NEW-PROJECT].git
+  git push -u origin master
+  ```
+
+3. Run setup script
+
+  ```bash
+  bin/setup
+  ```
+
+4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
+
+  ```bash
+  bin/ci
+  ```
+
+5. Run app
+
+  ```bash
+  bin/server
+  ```
+
+6. Update README
+
+  Do not forget to update application `README.md` file with detailed information based on the
+  existing template.
+
+  ```bash
+  mv doc/README_TEMPLATE.md README.md
+  # update README.md
+  git commit -am "Update README.md"
 
 ## Scripts
 
