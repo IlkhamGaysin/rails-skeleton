@@ -57,7 +57,7 @@ Information about external dependencies (redis, mongo, postgres, etc).
   mv doc/README_TEMPLATE.md README.md
   # update README.md
   git commit -am "Update README.md"
-
+  ```
 
 ## Scripts
 
