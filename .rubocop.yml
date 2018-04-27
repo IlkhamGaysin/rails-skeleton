@@ -55,7 +55,7 @@ Style/EmptyMethod:
     - compact
     - expanded
 
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter
@@ -73,7 +73,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Enabled: false
 
-Lint/EndAlignment:
+Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
   SupportedStylesAlignWith:
     - keyword

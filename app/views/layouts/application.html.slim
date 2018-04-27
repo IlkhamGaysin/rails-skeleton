@@ -12,7 +12,9 @@ html class='no-js' lang='en'
 
   body.container
     .row
+
       = yield
 
     = javascript_include_tag :application
     = content_for :javascript
+

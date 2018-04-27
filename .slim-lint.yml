@@ -24,19 +24,19 @@ linters:
     # templates isn't well-formatted, so we ignore them.
     ignored_cops:
       - Lint/BlockAlignment
-      - Lint/EndAlignment
+      - Layout/EndAlignment
       - Lint/Void
       - Metrics/LineLength
       - Style/AlignHash
       - Style/AlignParameters
       - Style/BlockNesting
-      - Style/FileName
+      - Naming/FileName
       - Style/FirstParameterIndentation
       - Style/IfUnlessModifier
       - Style/IndentationConsistency
       - Style/IndentationWidth
       - Style/Next
-      - Style/TrailingBlankLines
+      - Layout/TrailingBlankLines
       - Style/TrailingWhitespace
       - Style/WhileUntilModifier
       - Style/NestedTernaryOperator
