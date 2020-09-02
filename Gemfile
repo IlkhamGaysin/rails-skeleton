@@ -7,7 +7,7 @@ gem 'pg', '~> 0.18'
 gem 'rails', '~> 5.0.7'
 
 # server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 
 # assets
 gem 'autoprefixer-rails'
