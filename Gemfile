@@ -58,7 +58,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 4.0'
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
   gem 'slim_lint', require: false
