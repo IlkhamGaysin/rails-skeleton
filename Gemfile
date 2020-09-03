@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.0'
 
 # main
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 1.2'
 gem 'rails', '~> 5.0.7'
 
 # server
