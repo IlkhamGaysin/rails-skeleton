@@ -15,7 +15,7 @@ chdir APP_ROOT do
   # Add necessary setup steps to this file.
 
   puts '== Installing dependencies =='
-  system! 'gem install bundler --conservative'
+  system! 'gem install bundler'
   system('bundle check --path .bundle > /dev/null 2>&1') || system!('bundle install --path=.bundle')
 
   puts "\n== Copying sample files =="
