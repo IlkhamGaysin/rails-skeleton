@@ -4,7 +4,7 @@ ruby '2.4.0'
 
 # main
 gem 'pg', '~> 1.2'
-gem 'rails', '~> 5.0.7'
+gem 'rails', '~> 5.1.7'
 
 # server
 gem 'puma', '~> 3.12'
