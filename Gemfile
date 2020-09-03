@@ -66,7 +66,7 @@ end
 
 group :development do
   gem 'letter_opener'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '~> 3.2.1'
   gem 'rails-erd'
   gem 'slim-rails'
   gem 'spring'
