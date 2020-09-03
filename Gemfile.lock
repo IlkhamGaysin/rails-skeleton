@@ -93,7 +93,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
-    database_cleaner (1.6.0)
+    database_cleaner (1.8.5)
     decent_decoration (0.1.0)
       decent_exposure (~> 3.0)
     decent_exposure (3.0.2)
