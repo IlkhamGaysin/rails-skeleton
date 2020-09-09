@@ -65,7 +65,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'bundler-audit', '~> 0.7', require: false
   gem 'letter_opener'
   gem 'listen', '~> 3.2.1'
   gem 'rails-erd'
