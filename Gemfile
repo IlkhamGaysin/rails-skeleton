@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.5.1'
 
 # main
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg', '~> 1.2'
-gem 'rails', '~> 5.1.7'
+gem 'rails', '~> 5.2.4.3'
 
 # server
 gem 'puma', '~> 3.12'
@@ -12,7 +13,7 @@ gem 'puma', '~> 3.12'
 # assets
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 4.2.2'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -50,12 +51,11 @@ end
 
 group :development, :test do
   gem 'brakeman', require: false
-  gem 'bullet'
-  gem 'bundler-audit', require: false
+  gem 'bullet', '~> 6.1'
   gem 'byebug', platform: :mri
   gem 'coffeelint'
-  gem 'dotenv-rails'
-  gem 'factory_girl_rails'
+  gem 'dotenv-rails', '~> 2.7'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 4.0'
@@ -65,11 +65,12 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bundler-audit', '~> 0.7', require: false
   gem 'letter_opener'
   gem 'listen', '~> 3.2.1'
   gem 'rails-erd'
   gem 'slim-rails'
-  gem 'spring'
+  gem 'spring', '~> 2.1'
   gem 'spring-commands-rspec'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0'
