@@ -36,7 +36,7 @@ linters:
       - Style/IndentationConsistency
       - Style/IndentationWidth
       - Style/Next
-      - Layout/TrailingBlankLines
+      - Layout/TrailingEmptyLines
       - Style/TrailingWhitespace
       - Style/WhileUntilModifier
       - Style/NestedTernaryOperator

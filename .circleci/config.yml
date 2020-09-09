@@ -1,21 +1,57 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@1.1.1
+  ruby: circleci/ruby@1.1.0
+  heroku: circleci/heroku@1.2.2
 
 jobs:
-  test:
+  tests:
     docker:
-      - image: circleci/ruby:2.5.1-stretch-node
+      - image: circleci/ruby:2.6.6-node
+      - image: circleci/postgres:11.5-alpine-ram
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: test
+
+    environment:
+      RAILS_ENV: test
+      DATABASE_URL: postgresql://postgres@localhost/test
+      HOST: localhost
+
+    working_directory: ~/rails-skeleton
     executor: ruby/default
     steps:
       - checkout
       - ruby/install-deps
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      - run:
+          name: Database setup
+          command: bundle exec rails db:test:prepare
+
       - ruby/rspec-test
+
       - run:
           name: Run quality checks
           command: bin/quality
-
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git:
+          app-name: rails-skeleton-instance
+          maintenance-mode: true
 workflows:
   CD:
     jobs:
       - tests
+      - deploy:
+          requires:
+            - tests
+          filters:
+            branches:
+              only:
+                - master
