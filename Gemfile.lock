@@ -374,7 +374,7 @@ DEPENDENCIES
   bootstrap-sass
   brakeman
   bullet (~> 6.1)
-  bundler-audit (~> 0.7)
+  bundler-audit
   byebug
   capybara
   codeclimate-test-reporter (~> 1.0.0)
