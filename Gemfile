@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.5.1'
+ruby '2.6.6'
 
 # main
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -46,6 +46,7 @@ group :test do
   gem 'launchy'
   gem 'poltergeist'
   gem 'shoulda-matchers'
+  gem 'timecop'
   gem 'webmock', require: false
 end
 
@@ -58,8 +59,10 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-rails'
+  gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 4.0'
-  gem 'rubocop', require: false
+  gem 'rubocop', '~> 0.66', require: false
+  gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'slim_lint', require: false
 end

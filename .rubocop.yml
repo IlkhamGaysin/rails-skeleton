@@ -1,12 +1,15 @@
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-rails
 
 Rails:
   Enabled: true
 
 AllCops:
   UseCache: true
+  NewCops: enable
   CacheRootDirectory: ./tmp/**
-  TargetRubyVersion: 2.5.1
+  TargetRubyVersion: 2.6.6
   DisplayCopNames: true
   Exclude:
     - bin/**/*
@@ -57,7 +60,7 @@ Style/EmptyMethod:
     - compact
     - expanded
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
   SupportedStyles:
     - with_first_parameter
@@ -69,7 +72,7 @@ Style/FrozenStringLiteralComment:
 Style/StringMethods:
   Enabled: true
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/BlockLength:

@@ -1,3 +1,4 @@
 --colour
 --require spec_helper
---profile 2
+--profile 10
+--format progress
