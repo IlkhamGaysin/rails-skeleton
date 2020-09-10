@@ -1,28 +1,25 @@
 # Rails Sekeleton
-[![Build Status](https://semaphoreci.com/api/v1/ilkhamgaysin/rails-skeleton/branches/master/shields_badge.svg)](https://semaphoreci.com/ilkhamgaysin/rails-skeleton)
 [![CircleCI](https://circleci.com/gh/IlkhamGaysin/rails-skeleton.svg?style=svg)](https://circleci.com/gh/IlkhamGaysin/rails-skeleton)
 [![Code Climate](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton.png)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton)
-
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f242c790e849db75b15d/test_coverage)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton/test_coverage)
 ## Project description
 Rails Skeleton is the base Rails application template used for creating apps from scratch.
-It's based on Rails 5 and Ruby 2.4.0.
+It's based on Rails 5 and Ruby 2.6.6.
 
 ## Dependencies
 
 Information about external dependencies (redis, mongo, postgres, etc).
 
-- PostgreSQL 9.5
-- Ruby 2.4.0
-- PhantomJS
-- Rails 5
+- Ruby 2.6.6
+- Rails 5.2
 
 ## Bootstrap application
 
 1. Clone application as new project with original repository named "rails-skeleton".
 
-   ```bash
-   git clone git@github.com:IlkhamGaysin/rails-skeleton.git --origin skeleton [MY-NEW-PROJECT]
-   ```
+  ```bash
+  git clone git@github.com:IlkhamGaysin/rails-skeleton.git --origin skeleton [MY-NEW-PROJECT]
+  ```
 
 2. Create your new repo on GitHub and push master into it. Make sure master branch is tracking origin repo.
 
@@ -37,27 +34,22 @@ Information about external dependencies (redis, mongo, postgres, etc).
   bin/setup
   ```
 
-4. Run test and quality suits to make sure all dependencies are satisfied and applications works correctly before making changes.
+4. Run test and quality suits to make sure that application works correctly before making changes.
 
   ```bash
-  bin/ci
+  bin/rspec
   ```
 
-5. Run app
+5. Run quality checks to make sure that application looks good before making changes.
+
+  ```bash
+  bin/quality
+  ```
+
+6. Run app
 
   ```bash
   bin/server
-  ```
-
-6. Update README
-
-  Do not forget to update application `README.md` file with detailed information based on the
-  existing template.
-
-  ```bash
-  mv doc/README_TEMPLATE.md README.md
-  # update README.md
-  git commit -am "Update README.md"
   ```
 
 ## Scripts
@@ -65,20 +57,13 @@ Information about external dependencies (redis, mongo, postgres, etc).
 * `bin/setup` - setup required gems, clone example files, run seeds and migrate db if needed
 * `bin/update` - setup required gems and migrate db if needed
 * `bin/quality` - run brakeman and other check for the app
-* `bin/ci` - should be used in the CI to run specs
-
-## Documentation & Examples
-
-Where is documentation and examples (e.g. `./docs`)?
-
-## Continuous Integration
-
-Wating for integration...
 
 ## Servers
 
-Wating for integration...
+* [Staging](https://rails-skeleton-instance.herokuapp.com/)
 
 ## Deployment
 
-Wating for integration...
+The applciaiton is ready to be deployed to [Heroku.com](http://heroku.com) with the following plugins:
+
+* [Heroku Postgres](https://www.heroku.com/postgres) add-on will be used for database.

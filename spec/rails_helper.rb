@@ -6,6 +6,7 @@ if ENV['CI']
   SimpleCov.start('rails') do
     command_name "from_container_#{ENV.fetch('CIRCLE_NODE_INDEX', '')}"
     add_filter %w[bundle spec bin config public vendor tmp lib/templates lib/tasks log db]
+    coverage_dir ENV.fetch('COVERAGE_DIR', '.coverage')
   end
 end
 

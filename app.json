@@ -1,0 +1,19 @@
+{
+  "name": "rails-skeleton",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:schema:load"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "11.5"
+      }
+    }
+  ]
+}
