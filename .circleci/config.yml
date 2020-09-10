@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   tests:
+    parallelism: 2
     docker:
       - image: circleci/ruby:2.6.6-node
       - image: circleci/postgres:11.5-alpine-ram
@@ -17,11 +18,16 @@ jobs:
       DATABASE_URL: postgresql://postgres@localhost/test
       HOST: localhost
 
-    working_directory: ~/rails-skeleton
     executor: ruby/default
     steps:
       - checkout
       - ruby/install-deps
+
+      - run:
+          name:  Download cc-test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
 
       - run:
           name: Wait for DB
@@ -31,11 +37,50 @@ jobs:
           name: Database setup
           command: bundle exec rails db:test:prepare
 
+      - run:
+          name: Prepare Code Climate Reporter
+          command: ./cc-test-reporter before-build
+
       - ruby/rspec-test
+
+      - run:
+          name: Code Climate Test Coverage
+          command: |
+            ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$CIRCLE_NODE_INDEX.json"
+
+      - persist_to_workspace:
+          root: coverage
+          paths:
+            - codeclimate.*.json
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - coverage/**
+            - ./cc-test-reporter
+
+      - store_artifacts:
+          path: coverage
 
       - run:
           name: Run quality checks
           command: bin/quality
+
+  coverage:
+    docker:
+    - image: circleci/ruby:2.6.6-node
+      environment:
+          RAILS_ENV: test
+
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+
+      - run:
+          command: |
+            ./cc-test-reporter sum-coverage --output - codeclimate.*.json | ./cc-test-reporter upload-coverage --debug --input -
+
   deploy:
     executor: heroku/default
     steps:
@@ -44,10 +89,15 @@ jobs:
       - heroku/deploy-via-git:
           app-name: rails-skeleton-instance
           maintenance-mode: true
+
 workflows:
   CD:
     jobs:
       - tests
+      - coverage:
+          requires:
+            - tests
+
       - deploy:
           requires:
             - tests
@@ -55,3 +105,4 @@ workflows:
             branches:
               only:
                 - master
+                - production
