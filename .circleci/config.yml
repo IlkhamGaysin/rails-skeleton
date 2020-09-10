@@ -90,6 +90,7 @@ jobs:
       - heroku/deploy-via-git:
           app-name: rails-skeleton-instance
           maintenance-mode: true
+          force: true
 
 workflows:
   CD:
