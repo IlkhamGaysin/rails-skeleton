@@ -5,7 +5,7 @@ ruby '2.6.6'
 # main
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg', '~> 1.2'
-gem 'rails', '~> 5.2.4.3'
+gem 'rails', '~> 5.2.4.4'
 
 # server
 gem 'puma', '~> 3.12'
@@ -39,7 +39,6 @@ gem 'seedbank'
 
 group :test do
   gem 'capybara'
-  gem 'codeclimate-test-reporter', '~> 1.0.0'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'formulaic'
@@ -64,6 +63,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.66', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'simplecov', '~> 0.17.1', require: false
   gem 'slim_lint', require: false
 end
 

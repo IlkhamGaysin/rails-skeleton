@@ -1,4 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  FROM = 'from@example.com'.freeze
+
+  default from: ApplicationMailer::FROM
   layout 'mailer'
 end
