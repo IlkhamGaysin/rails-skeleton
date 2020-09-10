@@ -24,11 +24,22 @@ jobs:
       - checkout
       - ruby/install-deps
 
+      - restore_cache:
+          keys:
+            - code-climate-reporter-v1
+
       - run:
           name:  Download cc-test-reporter
           command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
+            if ! [ -f ./cc-test-reporter ]; then
+              curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+              chmod +x ./cc-test-reporter
+            fi
+
+      - save_cache:
+          key: code-climate-reporter-v1
+          paths:
+            - ./cc-test-reporter
 
       - run:
           name: Wait for DB
