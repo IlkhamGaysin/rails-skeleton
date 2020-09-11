@@ -76,6 +76,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    capybara-email (3.0.2)
+      capybara (>= 2.4, < 4.0)
+      mail
     childprocess (3.0.0)
     choice (0.2.0)
     coderay (1.1.1)
@@ -117,10 +120,6 @@ GEM
       activemodel-serializers-xml (>= 1.0)
       activesupport (>= 5.0)
       request_store (>= 1.0)
-    email_spec (2.1.0)
-      htmlentities (~> 4.3.3)
-      launchy (~> 2.1)
-      mail (~> 2.6.3)
     erubi (1.9.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
@@ -140,7 +139,6 @@ GEM
     hashdiff (1.0.1)
     health_check (2.6.0)
       rails (>= 4.0)
-    htmlentities (4.3.4)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     interactor (3.1.0)
@@ -382,6 +380,7 @@ DEPENDENCIES
   bullet (~> 6.1)
   byebug
   capybara
+  capybara-email
   coffee-rails (~> 4.2.2)
   coffeelint
   database_cleaner
@@ -390,7 +389,6 @@ DEPENDENCIES
   devise
   dotenv-rails (~> 2.7)
   draper
-  email_spec
   factory_bot_rails
   faker
   formulaic

@@ -39,8 +39,8 @@ gem 'seedbank'
 
 group :test do
   gem 'capybara'
+  gem 'capybara-email'
   gem 'database_cleaner'
-  gem 'email_spec'
   gem 'formulaic'
   gem 'launchy'
   gem 'shoulda-matchers'
