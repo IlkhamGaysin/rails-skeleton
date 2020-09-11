@@ -2,9 +2,11 @@
 [![CircleCI](https://circleci.com/gh/IlkhamGaysin/rails-skeleton.svg?style=svg)](https://circleci.com/gh/IlkhamGaysin/rails-skeleton)
 [![Code Climate](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton.png)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f242c790e849db75b15d/test_coverage)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton/test_coverage)
+
+* [Staging](https://rails-skeleton-instance.herokuapp.com/)
+
 ## Project description
 Rails Skeleton is the base Rails application template used for creating apps from scratch.
-It's based on Rails 5 and Ruby 2.6.6.
 
 ## Dependencies
 
@@ -57,10 +59,6 @@ Information about external dependencies (redis, mongo, postgres, etc).
 * `bin/setup` - setup required gems, clone example files, run seeds and migrate db if needed
 * `bin/update` - setup required gems and migrate db if needed
 * `bin/quality` - run brakeman and other check for the app
-
-## Servers
-
-* [Staging](https://rails-skeleton-instance.herokuapp.com/)
 
 ## Deployment
 
