@@ -7,7 +7,7 @@ jobs:
   tests:
     parallelism: 2
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: circleci/ruby:2.6.6-node-browsers
       - image: circleci/postgres:11.5-alpine-ram
         environment:
           POSTGRES_USER: postgres
@@ -40,10 +40,6 @@ jobs:
           key: code-climate-reporter-v1
           paths:
             - ./cc-test-reporter
-
-      - run:
-          name: Wait for DB
-          command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
       - run:
           name: Database setup

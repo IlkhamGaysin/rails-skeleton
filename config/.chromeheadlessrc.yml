@@ -1,0 +1,9 @@
+- no-sandbox
+- headless
+- disable-gpu
+- window-size=1400,1400
+- remote-debugging-port=9222
+- disable-extensions
+- disable-dev-shm-usage
+- disable-popup-blocking
+- disable-site-isolation-trials

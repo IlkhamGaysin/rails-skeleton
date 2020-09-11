@@ -1,13 +1,5 @@
-require 'simplecov'
-
-if ENV['CI']
-  SimpleCov.start do
-    add_filter ['.bundle', 'config', 'spec']
-  end
-end
-
 RSpec.configure do |config|
-  config.backtrace_exclusion_patterns << /\.bundle/
+  config.order = :random
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
