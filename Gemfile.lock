@@ -68,15 +68,16 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
     byebug (11.1.3)
-    capybara (2.14.0)
+    capybara (3.33.0)
       addressable
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (~> 1.5)
+      xpath (~> 3.2)
+    childprocess (3.0.0)
     choice (0.2.0)
-    cliver (0.3.2)
     coderay (1.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -130,13 +131,13 @@ GEM
     faker (2.12.0)
       i18n (>= 1.6, < 2)
     ffi (1.13.1)
-    formulaic (0.4.0)
+    formulaic (0.4.1)
       activesupport
       capybara
       i18n
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hashdiff (0.3.4)
+    hashdiff (1.0.1)
     health_check (2.6.0)
       rails (>= 4.0)
     htmlentities (4.3.4)
@@ -160,8 +161,8 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    launchy (2.4.3)
-      addressable (~> 2.3)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     letter_opener (1.7.0)
       launchy (~> 2.2)
     listen (3.2.1)
@@ -181,6 +182,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
     mimemagic (0.3.5)
+    mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     msgpack (1.3.3)
@@ -193,10 +195,6 @@ GEM
     parser (2.7.1.4)
       ast (~> 2.4.1)
     pg (1.2.3)
-    poltergeist (1.15.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -291,7 +289,8 @@ GEM
       rubocop (~> 0.87)
     ruby-graphviz (1.2.3)
     ruby-progressbar (1.10.1)
-    safe_yaml (1.0.4)
+    rubyzip (2.3.0)
+    safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -306,6 +305,9 @@ GEM
     sassc (2.4.0)
       ffi (~> 1.9)
     seedbank (0.4.0)
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     shoulda-matchers (4.4.1)
       activesupport (>= 4.2.0)
     simple_form (5.0.0)
@@ -358,15 +360,15 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (3.0.1)
+    webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xpath (2.0.0)
-      nokogiri (~> 1.3)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
 
 PLATFORMS
   ruby
@@ -401,7 +403,6 @@ DEPENDENCIES
   listen (~> 3.2.1)
   metamagic
   pg (~> 1.2)
-  poltergeist
   pry-rails
   puma (~> 3.12)
   pundit
@@ -416,6 +417,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (~> 5.0)
   seedbank
+  selenium-webdriver
   shoulda-matchers
   simple_form
   simplecov (~> 0.17.1)
