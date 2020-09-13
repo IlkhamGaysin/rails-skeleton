@@ -1,6 +1,6 @@
 # Rails Sekeleton
-[![CircleCI](https://circleci.com/gh/IlkhamGaysin/rails-skeleton.svg?style=svg)](https://circleci.com/gh/IlkhamGaysin/rails-skeleton)
-[![Code Climate](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton.png)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton)
+[![IlkhamGaysin](https://circleci.com/gh/IlkhamGaysin/rails-skeleton.svg?style=svg)](https://circleci.com/gh/IlkhamGaysin/rails-skeleton)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f242c790e849db75b15d/maintainability)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f242c790e849db75b15d/test_coverage)](https://codeclimate.com/github/IlkhamGaysin/rails-skeleton/test_coverage)
 
 * [Staging](https://rails-skeleton-instance.herokuapp.com/)
