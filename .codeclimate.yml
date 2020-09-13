@@ -1,11 +1,13 @@
 version: "2"
 plugins:
   brakeman:
-    enabled: true
+    enabled: false
   bundler-audit:
+    enabled: false
+  nodesecurity:
     enabled: true
   coffeelint:
-    enabled: true
+    enabled: false
   duplication:
     enabled: true
     config:
@@ -15,7 +17,7 @@ plugins:
   fixme:
     enabled: true
   rubocop:
-    enabled: true
+    enabled: false
 ratings:
   paths:
   - Gemfile.lock
@@ -24,7 +26,7 @@ ratings:
   - "**.slim"
   - "**.coffee"
   - "**.js"
-exclude_paths:
+exclude_patterns:
 - bin/
 - config/
 - db/
