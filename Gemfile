@@ -60,8 +60,9 @@ group :development, :test do
   gem 'rspec_junit_formatter'
   gem 'rspec-rails', '~> 4.0'
   gem 'rubocop', '~> 0.66', require: false
-  gem 'rubocop-rails'
-  gem 'rubocop-rspec'
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'scss_lint', require: false
   gem 'selenium-webdriver', require: false
   gem 'simplecov', '~> 0.17.1', require: false
   gem 'slim_lint', require: false

@@ -8,4 +8,5 @@ bin/brakeman --quiet --skip-libs --exit-on-warn
 # Using rake-task here since coffeelint.rb cmd doesn't exit with non-zero status
 # when code contains errors
 bin/rails coffeelint
+bin/scss-lint -c .scss-lint.yml
 bin/slim-lint app/views
