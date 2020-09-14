@@ -64,7 +64,7 @@ group :development, :test do
   gem 'rubocop-rspec', require: false
   gem 'scss_lint', require: false
   gem 'selenium-webdriver', require: false
-  gem 'simplecov', '~> 0.17.1', require: false
+  gem 'simplecov', '~> 0.19.0', require: false
   gem 'slim_lint', require: false
 end
 
