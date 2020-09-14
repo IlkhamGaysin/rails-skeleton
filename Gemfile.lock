@@ -240,9 +240,9 @@ GEM
     regexp_parser (1.7.1)
     request_store (1.5.0)
       rack (>= 1.4)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.4)
     rollbar (2.14.1)
       multi_json
