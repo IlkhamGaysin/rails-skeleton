@@ -13,7 +13,7 @@ gem 'puma', '~> 3.12'
 # assets
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
